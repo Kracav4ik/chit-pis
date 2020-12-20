@@ -88,6 +88,7 @@ public:
 
     EditableText& getEditable();
 
+    bool hasEvent();
     void processEvent();
     void handlePriorityKey(WORD virtualKey, WORD modifiers, std::function<void()> callback);
     void handleKey(WORD virtualKey, WORD modifiers, std::function<void()> callback);

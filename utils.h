@@ -15,7 +15,7 @@ std::wstring getTimeStr(const SYSTEMTIME& tl);
 std::wstring getTimeStr(const FILETIME& time);
 bool sameTime(const FILETIME& t1, const FILETIME& t2);
 
-std::wstring align(const std::wstring& s, int size);
+std::wstring align(const std::wstring& s, int size, bool padRight = true, wchar_t padChar = L' ');
 std::wstring trim(const std::wstring& s);
 
 template<typename T>

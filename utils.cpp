@@ -49,11 +49,12 @@ bool sameTime(const FILETIME& t1, const FILETIME& t2) {
     return getTimeStr(t1) == getTimeStr(t2);
 }
 
-std::wstring align(const std::wstring& s, int size) {
+std::wstring align(const std::wstring& s, int size, bool padRight, wchar_t padChar) {
     if (s.size() > size) {
         s.substr(0, size);
     }
-    return s + std::wstring(size - s.size(), L' ');
+    std::wstring pad(size - s.size(), padChar);
+    return padRight ? s + pad : pad + s;
 }
 
 std::wstring trim(const std::wstring& s) {

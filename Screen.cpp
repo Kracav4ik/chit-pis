@@ -265,6 +265,12 @@ EditableText& Screen::getEditable() {
     return editable;
 }
 
+bool Screen::hasEvent() {
+    DWORD count = 0;
+    GetNumberOfConsoleInputEvents(stdinHandle, &count);
+    return count > 0;
+}
+
 void Screen::processEvent() {
     INPUT_RECORD event;
     DWORD count;
