@@ -13,7 +13,7 @@ class StatusScreen {
 public:
     StatusScreen(bool isChit, int number, int waitMs);
 
-    void updateState(State s, int page, float progress = 0);
+    void updateState(State s, int page = -1, float progress = 0);
     void updateWait(int wait);
     void tickAnim();
 
